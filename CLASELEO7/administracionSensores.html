@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Sensores IoT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-green-900 to-green-800 min-h-screen flex items-center justify-center p-6">
+
+    <div class="bg-green-800 text-white p-8 rounded-2xl shadow-xl w-full max-w-2xl">
+        <h2 class="text-2xl font-bold mb-6 text-lime-400">Administración de Sensores IoT</h2>
+        <p class="text-sm text-green-200 mb-4">Seleccione la parcela o sensor para gestionar:</p>
+
+        <!-- Dropdown de sensores/parcela -->
+        <div class="relative mb-6">
+            <label for="sensor" class="block mb-2 text-sm font-medium text-green-100">Asignar a parcela</label>
+            <select id="sensor" name="sensor" 
+                class="w-full bg-green-700 text-white rounded-lg px-4 py-3 appearance-none 
+                       focus:outline-none focus:ring-2 focus:ring-lime-400 shadow-sm">
+                <option>Parcela Norte - Sensor Humedad</option>
+                <option>Parcela Sur - Sensor Temperatura</option>
+                <option>Invernadero 1 - Sensor pH</option>
+                <option>Invernadero 2 - Sensor Luminosidad</option>
+            </select>
+            <!-- Flecha -->
+            <span class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-green-200">▼</span>
+        </div>
+
+        <!-- Botones de acciones -->
+        <div class="flex gap-4">
+            <button class="bg-lime-500 hover:bg-lime-400 text-green-900 font-semibold px-4 py-2 rounded-lg shadow-md transition">
+                Registrar
+            </button>
+            <button class="bg-yellow-400 hover:bg-yellow-300 text-green-900 font-semibold px-4 py-2 rounded-lg shadow-md transition">
+                Editar
+            </button>
+            <button class="bg-red-500 hover:bg-red-400 text-white font-semibold px-4 py-2 rounded-lg shadow-md transition">
+                Eliminar
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+</body>
+</html>

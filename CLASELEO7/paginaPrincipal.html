@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>AgroTech - Dashboard IoT</title>
+</head>
+<body class="bg-gradient-to-b from-green-900 to-green-800">
+
+    <div class="py-12 sm:py-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            
+            <h2 class="text-center text-base font-semibold text-green-200">AgroTech Solutions</h2>
+            <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                Panel de Funcionalidades IoT
+            </p>
+
+            <div class="mt-10 grid gap-6 sm:mt-16 lg:grid-cols-[30%_70%]">
+
+                <!-- Column Izquierda -->
+                <div class="space-y-6">
+
+                    <!-- Rendimiento -->
+                    <div class="relative group">
+                        <div class="absolute inset-px rounded-lg bg-green-800 group-hover:bg-green-700 transition"></div>
+                        <div class="relative flex flex-col overflow-hidden rounded-lg p-6">
+                            <p class="text-lg font-medium tracking-tight text-green-300">Rendimiento</p>
+                            <p class="mt-2 text-sm text-green-100">Optimizado para manejar grandes volúmenes de datos agrícolas en tiempo real.</p>
+                            <img src="https://tailwindcss.com/plus-assets/img/component-images/dark-bento-03-performance.png" alt="Rendimiento" class="w-full mt-4 rounded-lg shadow-lg">
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/20"></div>
+                    </div>
+
+                    <!-- Administración de sensores -->
+                     <a href="./administracionSensores.html"><div class="relative group">
+                        <div class="absolute inset-px rounded-lg bg-green-800 group-hover:bg-green-700 transition"></div>
+                        <div class="relative flex flex-col overflow-hidden rounded-lg p-6">
+                            <p class="text-lg font-medium tracking-tight text-green-300">Administración de sensores IoT</p>
+                            <p class="mt-2 text-sm text-green-100">Registrar, editar y eliminar sensores vinculados a cada parcela agrícola.</p>
+                            <img src="./img/editar.png" alt="Sensores" class="mx-auto h-10 w-auto drop-shadow-md">
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/20"></div>
+                    </div></a>
+                    
+
+                    <!-- Reportes históricos -->
+                    <div class="relative group">
+                        <div class="absolute inset-px rounded-lg bg-green-800 group-hover:bg-green-700 transition"></div>
+                        <div class="relative flex flex-col overflow-hidden rounded-lg p-6">
+                            <p class="text-lg font-medium tracking-tight text-green-300">Reportes históricos</p>
+                            <a href="./Reporte_Historico_RF5.pdf"
+                               class="mt-4 flex w-full justify-center rounded-md bg-lime-500 px-3 py-2 text-sm font-semibold text-green-950 hover:bg-lime-400 transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-lime-300 text-center">
+                               Descargar
+                            </a>
+                        </div>
+                        <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/20"></div>
+                    </div>
+
+                </div>
+
+                <!-- Column Derecha -->
+                <div class="relative group">
+                    <div class="absolute inset-px rounded-lg bg-green-800 group-hover:bg-green-700 transition"></div>
+                    <div class="relative flex flex-col overflow-hidden rounded-lg p-6">
+                        <p class="text-lg font-medium tracking-tight text-green-300"> Visualización de datos en tiempo real</p>
+                        <p class="mt-2 text-sm text-green-100">Dashboard con métricas captadas por los sensores en vivo y gráficas de producción.</p>
+
+                        <div class="mt-6 grid grid-cols-3 gap-6 text-center">
+
+                            <!-- Café -->
+                            <div class="flex flex-col items-center">
+                                <div class="relative w-32 h-32 rounded-full bg-green-700">
+                                    <div class="absolute inset-0 rounded-full border-[12px] border-green-400 border-t-transparent rotate-[70deg] transition"></div>
+                                    <span class="absolute inset-0 flex items-center justify-center text-white font-bold porcentaje">70%</span>
+                                </div>
+                                <p class="mt-2 text-white text-sm">Café</p>
+                            </div>
+
+                            <!-- Maíz -->
+                            <div class="flex flex-col items-center">
+                                <div class="relative w-32 h-32 rounded-full bg-yellow-700">
+                                    <div class="absolute inset-0 rounded-full border-[12px] border-yellow-400 border-t-transparent rotate-[50deg] transition"></div>
+                                    <span class="absolute inset-0 flex items-center justify-center text-white font-bold porcentaje">50%</span>
+                                </div>
+                                <p class="mt-2 text-white text-sm">Maíz</p>
+                            </div>
+
+                            <!-- Tomate -->
+                            <div class="flex flex-col items-center">
+                                <div class="relative w-32 h-32 rounded-full bg-red-700">
+                                    <div class="absolute inset-0 rounded-full border-[12px] border-red-400 border-t-transparent rotate-[85deg] transition"></div>
+                                    <span class="absolute inset-0 flex items-center justify-center text-white font-bold porcentaje">85%</span>
+                                </div>
+                                <p class="mt-2 text-white text-sm">Tomate</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/20"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const porcentajes = document.querySelectorAll(".porcentaje");
+            porcentajes.forEach(el => {
+                let valor = parseInt(el.textContent.replace("%",""));
+                if(valor > 80){
+                    alert(`⚠️ Alerta: ${el.parentElement.nextElementSibling.textContent} tiene ${valor}%, REPORTE  ENVIADO AL CORREO`);
+                }
+            }); 
+        });
+    </script>
+
+</body>
+</html>

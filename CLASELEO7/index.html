@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTech</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="./img/logoAgroTech.png" type="image/png">
+</head>
+
+<body class="bg-gradient-to-b from-green-900 via-green-800 to-emerald-700 min-h-screen">
+
+    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+        <div class="xl:mx-auto xl:w-full xl:max-w-sm">
+            <img src="./img/logoAgroTech.png" alt="AgroTech Logo"
+                class="mx-auto h-20 w-auto drop-shadow-md" />
+            <h2 class="mt-10 text-center text-2xl font-bold tracking-tight text-emerald-200">Entra a tu cuenta</h2>
+        </div>
+
+        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm bg-white/10 p-6 rounded-xl shadow-lg">
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-emerald-100">Email address</label>
+                    <div class="mt-2">
+                        <input id="email" type="email" name="email" required autocomplete="email"
+                            class="block w-full rounded-md bg-emerald-900/40 px-3 py-1.5 text-base text-emerald-50 placeholder:text-emerald-300 outline-none focus:ring-2 focus:ring-lime-400 sm:text-sm" />
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between">
+                        <label for="password" class="block text-sm font-medium text-emerald-100">Password</label>
+                        <div class="text-sm">
+                            <a href="#" class="font-semibold text-lime-300 hover:text-lime-200">Forgot password?</a>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <input id="password" type="password" name="password" required autocomplete="current-password"
+                            class="block w-full rounded-md bg-emerald-900/40 px-3 py-1.5 text-base text-emerald-50 placeholder:text-emerald-300 outline-none focus:ring-2 focus:ring-lime-400 sm:text-sm" />
+                    </div>
+                </div>
+
+                <div>
+                    <a href="./usuarios.html"
+                        class="flex w-full justify-center rounded-md bg-lime-500 px-3 py-1.5 text-sm font-semibold text-green-950 hover:bg-lime-400 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-lime-300 text-center">
+                        Entrar
+                    </a>
+                </div>
+            </form>
+
+            <p class="mt-10 text-center text-sm text-emerald-200">
+                ¿No eres miembro?
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
