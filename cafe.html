@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Café Artesanal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f5f0e6] text-[#4b2e2b] font-sans">
+
+<!-- NAVBAR -->
+<nav class="bg-orange-950 p-4 shadow-lg">
+  <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-white text-2xl font-bold">Café Dorado</h1>
+    <button id="menu-btn" class="text-white md:hidden text-3xl">☰</button>
+    <ul id="menu" class="hidden md:flex space-x-6 text-white font-semibold">
+      <li><a href="#inicio" class="hover:underline">Inicio</a></li>
+      <li><a href="#catalogo" class="hover:underline">Catálogo</a></li>
+      <li><a href="#nosotros" class="hover:underline">Nosotros</a></li>
+      <li><a href="#contacto" class="hover:underline">Contacto</a></li>
+    </ul>
+  </div>
+  <!-- Menú móvil -->
+  <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-2 text-white font-semibold">
+    <a href="#inicio" class="block hover:underline">Inicio</a>
+    <a href="#catalogo" class="block hover:underline">Catálogo</a>
+    <a href="#nosotros" class="block hover:underline">Nosotros</a>
+    <a href="#contacto" class="block hover:underline">Contacto</a>
+  </div>
+</nav>
+
+<section id="inicio" class="relative bg-cover bg-center h-[400px]" style="background-image: url('https://cdn.pixabay.com/photo/2017/08/07/00/42/coffee-2591216_1280.jpg');">
+  <div class="absolute inset-0 bg-orange-900  flex flex-col justify-center items-center text-center text-white p-6">
+    <h2 class="text-4xl font-bold">Café artesanal de calidad</h2>
+    <p class="mt-2 text-lg">El aroma y sabor que tu día necesita</p>
+    <a href="#catalogo" class="mt-4 bg-[#d4a373] text-[#4b2e2b] px-6 py-2 rounded hover:bg-[#b5835a] transition">Ver catálogo</a>
+  </div>
+</section>
+
+<!-- CATÁLOGO -->
+<section id="catalogo" class="container mx-auto py-12 px-4">
+  <h3 class="text-3xl font-bold text-center mb-8">Nuestros Cafés</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <!-- Tarjeta -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="https://i.pinimg.com/736x/db/ac/82/dbac820a7a5b34ba537412eef194cf30.jpg" alt="Café 1" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold">Café Clásico</h4>
+        <p class="text-sm text-gray-600">Sabor intenso y aroma profundo.</p>
+        <p class="font-bold mt-2">$12.000</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="https://i.pinimg.com/736x/ae/9d/91/ae9d91975b1893e124fc8da5c0853949.jpg" alt="Café 2" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold">Café Orgánico</h4>
+        <p class="text-sm text-gray-600">Cultivado sin pesticidas.</p>
+        <p class="font-bold mt-2">$15.000</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="https://i.pinimg.com/1200x/e4/2c/5f/e42c5f15acac39d892dc01ba34bc7427.jpg" alt="Café 3" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold">Café Espresso</h4>
+        <p class="text-sm text-gray-600">Perfecto para un inicio de día.</p>
+        <p class="font-bold mt-2">$18.000</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition">
+      <img src="https://i.pinimg.com/1200x/ae/d0/3d/aed03d9dc3113ca437765bddb1712b87.jpg" alt="Café 4" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <h4 class="text-xl font-semibold">Café Gourmet</h4>
+        <p class="text-sm text-gray-600">Sabor exclusivo y refinado.</p>
+        <p class="font-bold mt-2">$20.000</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros" class="bg-[#d4a373] text-white py-12 px-4">
+  <div class="container mx-auto text-center">
+    <h3 class="text-3xl font-bold mb-4">Acerca de nosotros</h3>
+    <p class="max-w-2xl mx-auto">Somos apasionados del café artesanal. Trabajamos con caficultores locales para ofrecer productos de la más alta calidad, cuidando el medio ambiente y fomentando el comercio justo.</p>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="container mx-auto py-12 px-4">
+  <h3 class="text-3xl font-bold text-center mb-8">Contáctanos</h3>
+  <form class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg space-y-4">
+    <input type="text" placeholder="Nombre" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#d4a373]">
+    <input type="email" placeholder="Correo electrónico" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#d4a373]">
+    <textarea placeholder="Mensaje" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#d4a373]"></textarea>
+    <button type="submit" class="bg-[#4b2e2b] text-white px-6 py-2 rounded hover:bg-[#3a221f] transition">Enviar</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#4b2e2b] text-white py-4 text-center">
+  <p>© 2025 Café Dorado </p>
+</footer>
+
+
+</body>
+</html>
